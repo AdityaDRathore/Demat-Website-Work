@@ -1,0 +1,188 @@
+:root {
+    --primary-color: #5367ff;
+    --secondary-color: #f0f2f5;
+    --text-color: #333;
+    --positive-color: #00c853;
+    --negative-color: #ff1744;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.sidebar .active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.support {
+    margin-top: auto;
+}
+
+.support button {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.stock-ticker {
+    display: flex;
+    overflow-x: auto;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.stock-ticker-item {
+    margin-right: 20px;
+    white-space: nowrap;
+}
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.indices-section, .charts-section, .top-gainers-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.chart {
+    margin-bottom: 20px;
+}
+
+.toggle-buttons {
+    margin-bottom: 10px;
+}
+
+.toggle-buttons button {
+    padding: 5px 10px;
+    background-color: var(--secondary-color);
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-buttons button.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .dashboard-content {
+        grid-template-columns: 1fr;
+    }
+}

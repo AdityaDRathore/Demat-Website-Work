@@ -1,0 +1,55 @@
+.orders-container {
+    padding: 20px;
+    background-color: #f5f5f5;
+    min-height: calc(100vh - 60px); /* Adjust based on your header height */
+  }
+  
+  .profit-loss-box {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profit-loss-box h3 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .profit-value {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .profit {
+    color: #4CAF50;
+  }
+  
+  .loss {
+    color: #F44336;
+  }
+  
+  .no-orders {
+    text-align: center;
+    color: #666;
+  }
+  
+  .order-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .order-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .orders-container {
+      padding: 10px;
+    }
+  }

@@ -1,0 +1,23 @@
+{
+  "name": "bharat-broker",
+  "version": "1.0.0",
+  "description": "Your project description",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.3"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0"
+  }
+}

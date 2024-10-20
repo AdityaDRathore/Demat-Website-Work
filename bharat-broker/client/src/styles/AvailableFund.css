@@ -1,0 +1,53 @@
+.available-fund {
+  padding: 1.875rem;
+}
+
+.available-fund h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--bs-body-color);
+  font-weight: 600;
+}
+
+.fund-info-card {
+  background-color: var(--card);
+  border-radius: 0.5rem;
+  box-shadow: 0rem 0.3125rem 0.3125rem 0rem rgba(82, 63, 105, 0.05);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  transition: all .5s ease-in-out;
+  border: 0rem solid transparent;
+  height: calc(100% - 30px);
+}
+
+.fund-info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.fund-info-label {
+  font-size: 0.875rem;
+  color: var(--text-gray);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.fund-info-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .fund-info-card {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .fund-info-item {
+    width: 100%;
+  }
+}

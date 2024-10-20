@@ -1,0 +1,263 @@
+/* Base styles (mobile-first) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .container {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+  
+  /* Typography */
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  /* Header */
+  header {
+    background-color: #f8f8f8;
+    padding: 1rem 0;
+  }
+  
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .download-app {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  /* Hero section */
+  .hero {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  
+  /* Stats section */
+  .stats {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .stat-item {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Services section */
+  .service-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+  
+  /* Testimonials */
+  .testimonial-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+  
+  .testimonial-item {
+    background-color: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .testimonial-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  /* Contact form */
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .contact-form button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  /* Media Queries for larger screens */
+  
+  /* Tablet */
+  @media screen and (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    h2 {
+      font-size: 2rem;
+    }
+  
+    /* Header */
+    nav ul {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  
+    nav ul li {
+      margin-bottom: 0;
+    }
+  
+    .download-app {
+      width: auto;
+      display: inline-block;
+      margin-top: 0;
+    }
+  
+    /* Stats section */
+    .stats {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  
+    .stat-item {
+      margin-bottom: 0;
+    }
+  
+    /* Services section */
+    .service-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    /* Testimonials */
+    .testimonial-list {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  
+    .testimonial-item {
+      flex-basis: calc(50% - 1rem);
+    }
+  
+    /* Contact form */
+    .contact-content {
+      flex-direction: row;
+    }
+  
+    .contact-info,
+    .contact-form {
+      flex-basis: 50%;
+    }
+  }
+  
+  /* Desktop */
+  @media screen and (min-width: 1024px) {
+    .container {
+      max-width: 960px;
+    }
+  
+    h1 {
+      font-size: 3rem;
+    }
+  
+    h2 {
+      font-size: 2.5rem;
+    }
+  
+    /* Services section */
+    .service-list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+    /* Testimonials */
+    .testimonial-item {
+      flex-basis: calc(33.333% - 1.33rem);
+    }
+  }
+  
+  /* Large Desktop */
+  @media screen and (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+  }

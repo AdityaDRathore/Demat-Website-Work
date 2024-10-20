@@ -1,0 +1,191 @@
+.add-fund {
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+}
+
+.row {
+  --bs-gutter-x: 30px;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-top: var(--bs-gutter-y);
+}
+
+.fund-info {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--card);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.qr-code-section {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.qr-code {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+}
+
+.account-info .info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--light);
+  margin-bottom: 5px;
+}
+
+.account-info .info-item:nth-child(even) {
+  background-color: var(--card);
+}
+
+.account-info .info-item svg {
+  cursor: pointer;
+  color: var(--primary);
+}
+
+.balance-box {
+  background-color: var(--card);
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.balance-box svg {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.balance-box p {
+  margin: 0;
+}
+
+.balance-box .balance {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--success);
+}
+
+.add-funds-form {
+  background-color: var(--card);
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.file-input-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.file-input-wrapper button {
+  background-color: var(--primary);
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.submit-button {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.previous-funds table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.previous-funds th, .previous-funds td {
+  border: 1px solid var(--border);
+  padding: 10px;
+  text-align: left;
+}
+
+.previous-funds th {
+  background-color: var(--light);
+}
+
+.status.approved {
+  color: var(--success);
+}
+
+.delete-button {
+  background-color: var(--danger);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Add these variables to match the provided styling */
+:root {
+  --primary: #3736af;
+  --card: #fff;
+  --text: #717579;
+  --light: #f3f3f3;
+  --success: #3ab67a;
+  --danger: #fd5353;
+  --border: #e6e6e6;
+}
+
+/* Add scrollbar styles */
+::-webkit-scrollbar {
+  width: 5px;
+  opacity: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(111, 133, 147, 0.1);
+}
+
+/* Add selection style */
+::selection {
+  color: #fff;
+  background: var(--primary);
+}

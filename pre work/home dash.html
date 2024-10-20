@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Dashboard</title>
+    <link rel="stylesheet" href="home dash.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <ul>
+                <li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
+                <li><a href="#"><i class="icon-add"></i> Add fund</a></li>
+                <li><a href="#"><i class="icon-money"></i> Available Fund</a></li>
+                <li><a href="#"><i class="icon-orders"></i> Orders</a></li>
+                <li><a href="#"><i class="icon-withdrawal"></i> Withdrawal</a></li>
+                <li><a href="#"><i class="icon-kyc"></i> KYC - Approved</a></li>
+            </ul>
+            <div class="support">
+                <button>Supports</button>
+            </div>
+        </nav>
+        <main>
+            <header>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search here..">
+                    <button><i class="icon-search"></i></button>
+                </div>
+                <div class="user-info">
+                    <span>Jagadamba Prasad</span>
+                    <img src="user-avatar.jpg" alt="User Avatar">
+                </div>
+            </header>
+            <div class="stock-ticker">
+                <!-- Stock ticker items will be dynamically added here -->
+            </div>
+            <div class="dashboard-content">
+                <div class="indices-section">
+                    <h2>Indices</h2>
+                    <table id="indices-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Change</th>
+                                <th>%Change</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Table rows will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="charts-section">
+                    <div class="chart">
+                        <h2>NIFTY</h2>
+                        <canvas id="nifty-chart"></canvas>
+                    </div>
+                    <div class="chart">
+                        <h2>SENSEX</h2>
+                        <canvas id="sensex-chart"></canvas>
+                    </div>
+                </div>
+                <div class="top-gainers-section">
+                    <h2>Top Gainers</h2>
+                    <div class="toggle-buttons">
+                        <button class="active" data-exchange="NSE">NSE</button>
+                        <button data-exchange="BSE">BSE</button>
+                    </div>
+                    <table id="top-gainers-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Change</th>
+                                <th>%Change</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Table rows will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="home dash.js"></script>
+</body>
+</html>
