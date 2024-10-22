@@ -18,15 +18,19 @@ function Dashboard() {
       case 'home':
         return (
           <>
-            <StockTicker />
-            <div className="dashboard-grid">
-              <div className="left-column">
-                <IndicesTable />
-                <TopGainersTable />
-              </div>
-              <div className="right-column">
-                <Graph title="NIFTY" />
-                <Graph title="SENSEX" />
+            <div className="stock-ticker-wrapper">
+              <StockTicker />
+            </div>
+            <div className="dashboard-content-wrapper">
+              <div className="dashboard-grid">
+                <div className="left-column">
+                  <IndicesTable />
+                  <TopGainersTable />
+                </div>
+                <div className="right-column">
+                  <Graph title="NIFTY" />
+                  <Graph title="SENSEX" />
+                </div>
               </div>
             </div>
           </>
