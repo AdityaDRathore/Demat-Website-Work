@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
@@ -10,10 +10,10 @@ import Dashboard from './components/dashboard/Dashboard';
 import './styles/main.css';
 
 // Layout component that includes the Header
-const Layout = () => (
+const Layout = ({ children }) => (
   <>
     <Header />
-    <Outlet />
+    {children}
   </>
 );
 
@@ -24,22 +24,19 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Routes with Header */}
-        <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Registration />} />
-        </Route>
+        <Route path="/" element={<Layout><Home /></Layout>} />
+        <Route path="/about" element={<Layout><About /></Layout>} />
+        <Route path="/contact" element={<Layout><Contact /></Layout>} />
+        <Route path="/login" element={<Layout><Login /></Layout>} />
+        <Route path="/register" element={<Layout><Registration /></Layout>} />
         
-        {/* Protected route for authenticated users (without Header) */}
+        {/* Protected route for authenticated users */}
         <Route 
           path="/dashboard" 
           element={isLoggedIn ? <Dashboard /> : <Navigate to="/login" replace />} 
         />
         
-        {/* Development route that doesn't require authentication (without Header) */}
+        {/* Development route that doesn't require authentication */}
         <Route path="/dev-dashboard" element={<Dashboard />} />
       </Routes>
     </Router>

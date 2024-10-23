@@ -5,6 +5,7 @@ require('dotenv').config();
 const authRoutes = require('./routes/auth');
 const fundRoutes = require('./routes/fundRoutes');
 const orderRoutes = require('./routes/orderRoutes');
+const withdrawalRoutes = require('./routes/withdrawalRoutes');
 
 console.log('Database connection bypassed for development');
 
@@ -26,6 +27,7 @@ app.get('/api/test', (req, res) => {
 
 app.use('/api/funds', fundRoutes);
 app.use('/api/orders', orderRoutes);
+app.use('/api', withdrawalRoutes);
 
 const PORT = process.env.PORT || 5000;
 

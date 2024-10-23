@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from './Header';
 import Sidebar from './Sidebar';
+import Withdrawal from './Withdrawal';
 import StockTicker from './StockTicker';
 import IndicesTable from './IndicesTable';
 import TopGainersTable from './TopGainersTable';
@@ -8,7 +9,6 @@ import Graph from './Graph';
 import AddFund from './AddFund';
 import AvailableFund from './AvailableFund';
 import Orders from './Orders';
-import '../../styles/Dashboard.css';
 
 function Dashboard() {
   const [activeComponent, setActiveComponent] = useState('home');
@@ -18,20 +18,11 @@ function Dashboard() {
       case 'home':
         return (
           <>
-            <div className="stock-ticker-wrapper">
-              <StockTicker />
-            </div>
-            <div className="dashboard-content-wrapper">
-              <div className="dashboard-grid">
-                <div className="left-column">
-                  <IndicesTable />
-                  <TopGainersTable />
-                </div>
-                <div className="right-column">
-                  <Graph title="NIFTY" />
-                  <Graph title="SENSEX" />
-                </div>
-              </div>
+            <StockTicker />
+            <div className="dashboard-grid">
+              <IndicesTable />
+              <TopGainersTable />
+              <Graph title="Nifty 50" />
             </div>
           </>
         );
@@ -41,6 +32,8 @@ function Dashboard() {
         return <AvailableFund />;
       case 'orders':
         return <Orders />;
+      case 'withdrawal':
+        return <Withdrawal />;
       default:
         return null;
     }
@@ -48,9 +41,9 @@ function Dashboard() {
 
   return (
     <div className="dashboard-layout">
+      <Header />
       <Sidebar setActiveComponent={setActiveComponent} />
       <div className="dashboard-main">
-        <Header />
         <div className="dashboard-content">
           {renderComponent()}
         </div>
