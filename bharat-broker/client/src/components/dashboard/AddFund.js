@@ -55,7 +55,7 @@ function AddFund() {
           <FontAwesomeIcon icon={faWallet} />
           <div>
             <p>Total Available Balance</p>
-            <p className="balance">Rs. 60,965.00</p>
+            <p className="balance">Rs. 0.00</p>
           </div>
         </div>
       </div>
