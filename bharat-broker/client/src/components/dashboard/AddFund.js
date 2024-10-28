@@ -32,8 +32,8 @@ function AddFund() {
           <img src="/path/to/your/qr-code.png" alt="QR Code" className="qr-code" />
           <div className="account-info">
             <div className="info-item">
-              <span>Name - Grow capitals</span>
-              <FontAwesomeIcon icon={faCopy} onClick={() => handleCopy("Grow capitals")} />
+              <span>Name - Broker Bharat</span>
+              <FontAwesomeIcon icon={faCopy} onClick={() => handleCopy("Broker Bharat")} />
             </div>
             <div className="info-item">
               <span>A/c No. - 500101012461041</span>

@@ -21,6 +21,11 @@ const UserSchema = new mongoose.Schema({
   funds: {
     total: { type: Number, default: 0 },
     usedMargin: { type: Number, default: 0 }
+  },
+  kycStatus: {
+    type: String,
+    enum: ['Not Approved', 'Approved'],
+    default: 'Not Approved'
   }
 });
 

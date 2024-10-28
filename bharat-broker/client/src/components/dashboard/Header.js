@@ -10,7 +10,7 @@ function Header() {
         <input type="text" placeholder="Search here..." />
       </div>
       <div className="user-profile">
-        <span>Jagadamba Parsad</span>
+        <span>User Name</span>
         <FontAwesomeIcon icon={faUser} />
       </div>
     </header>

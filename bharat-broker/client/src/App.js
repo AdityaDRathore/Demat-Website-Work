@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
@@ -16,6 +17,10 @@ const Layout = ({ children }) => (
     {children}
   </>
 );
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 function App() {
   // This would typically come from your authentication system

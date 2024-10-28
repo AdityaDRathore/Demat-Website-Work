@@ -40,7 +40,7 @@
   }
   
   button {
-    background-color: #3736af;
+    background-color: var(--primary);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -51,7 +51,7 @@
   }
   
   button:hover {
-    background-color: #2b2a88;
+    background-color: var(--primary-hover);
   }
   
   .withdrawal-table {
@@ -78,9 +78,9 @@
   }
   
   th {
-    background-color: #f2f2f2;
+    background-color: var(--light);
+    color: var(--primary);
     font-weight: bold;
-    color: #333;
   }
   
   .status-pending {
@@ -97,7 +97,7 @@
   
   .description-btn {
     background-color: transparent;
-    color: #3736af;
+    color: var(--accent-blue);
     border: none;
     cursor: pointer;
   }

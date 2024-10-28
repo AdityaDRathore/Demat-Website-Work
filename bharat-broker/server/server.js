@@ -6,6 +6,8 @@ const authRoutes = require('./routes/auth');
 const fundRoutes = require('./routes/fundRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 const withdrawalRoutes = require('./routes/withdrawalRoutes');
+const kycRoutes = require('./routes/kycRoutes');
+const mockData = require('./middleware/mockData');
 
 console.log('Database connection bypassed for development');
 
@@ -13,7 +15,8 @@ const app = express();
 
 // Middleware
 app.use(cors());
-app.use(express.json({ extended: false }));
+app.use(express.json());
+app.use(mockData);
 
 // Routes
 // Uncomment these when you have implemented these routes
@@ -28,6 +31,7 @@ app.get('/api/test', (req, res) => {
 app.use('/api/funds', fundRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api', withdrawalRoutes);
+app.use('/api/kyc', kycRoutes);
 
 const PORT = process.env.PORT || 5000;
 

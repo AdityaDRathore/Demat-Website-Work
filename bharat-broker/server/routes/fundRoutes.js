@@ -8,11 +8,11 @@ const User = require('../models/User');
 // @access  Private
 router.get('/', auth, async (req, res) => {
   try {
-    const user = await User.findById(req.user.id).select('funds');
+    // For development, you might want to return mock data
     res.json({
-      totalFund: user.funds.total,
-      usedMargin: user.funds.usedMargin,
-      availableMargin: user.funds.total - user.funds.usedMargin
+      totalFund: 10000,
+      usedMargin: 5000,
+      availableMargin: 5000
     });
   } catch (err) {
     console.error(err.message);

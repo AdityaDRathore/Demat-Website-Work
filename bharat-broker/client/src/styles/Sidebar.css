@@ -6,7 +6,8 @@
   top: 5.1rem;
   padding-top: 0;
   z-index: 3;
-  background-color: var(--sidebar-bg, #FFFFFF);
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--light-green);
   transition: all .2s ease;
   box-shadow: 0rem 0.9375rem 1.875rem 0rem rgba(0, 0, 0, 0.02);
   scrollbar-width: thin;
@@ -49,8 +50,9 @@
 }
 
 .sidebar-nav li:hover, .sidebar-nav li.active {
-  background-color: var(--primary, #3736af);
-  color: #fff;
+  background-color: var(--light-green);
+  color: var(--primary);
+  border-left: 3px solid var(--primary);
 }
 
 .sidebar-nav li svg {
@@ -59,7 +61,7 @@
 }
 
 .sidebar-nav li.kyc-approved {
-  color: var(--bs-success, #3ab67a);
+  color: var(--bs-success, #27ae60);
 }
 
 .support-button {
@@ -67,7 +69,7 @@
   bottom: 1rem;
   left: 1rem;
   right: 1rem;
-  background-color: var(--primary, #3736af);
+  background-color: var(--accent-orange);
   padding: 0.75rem;
   border-radius: 0.25rem;
   display: flex;
@@ -79,7 +81,7 @@
 }
 
 .support-button:hover {
-  background-color: var(--primary-hover, #2b2a88);
+  background-color: var(--primary);
 }
 
 .support-icon {
@@ -127,5 +129,6 @@
 @media (max-width: 768px) {
   .sidebar-toggle {
     display: block;
+    background-color: var(--primary);
   }
 }
