@@ -1,0 +1,1 @@
+a comprehensive web and mobile platform for financial brokers. This platform aimed to streamline their operations by providing tools for managing investments, facilitating secure transactions, handling fund management, and ensuring secure user authentication. The intention was to create a seamless experience for both the brokers and their clients.
